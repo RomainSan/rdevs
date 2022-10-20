@@ -16,7 +16,7 @@ const priceArray = [
     price: "500€",
     tech: "WordPress",
     link: "https://fr.wordpress.org/",
-    prestation: "Vitrine",
+    prestation: "Vitrine - One Page",
     description: "Idéale pour avoir une présence sur internet",
     content: [
       "Domaine + hébergement pendant 12 mois",
