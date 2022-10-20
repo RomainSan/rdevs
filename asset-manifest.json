@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/rdevs/static/css/main.adb3f77c.css",
+    "main.js": "/rdevs/static/js/main.8bd068ec.js",
+    "static/media/banner.jpg": "/rdevs/static/media/banner.1346f7f7096043a00698.jpg",
+    "static/media/handyman.jpg": "/rdevs/static/media/handyman.c1c2a61e8edf000b5a1e.jpg",
+    "static/media/about.svg": "/rdevs/static/media/about.da3983d80bb3ac3bf80da7a6b064e804.svg",
+    "static/media/responsive.svg": "/rdevs/static/media/responsive.34844e0e26d563782dc3300e9f1a10d0.svg",
+    "static/media/referer.svg": "/rdevs/static/media/referer.9ecd5e8efdbbfac8fdae2cac1a128863.svg",
+    "static/media/design.svg": "/rdevs/static/media/design.b9cedbee3e3cca6acc9a8cbfe66281b0.svg",
+    "static/media/code.svg": "/rdevs/static/media/code.026dcd9d52f629860b549a55223c482b.svg",
+    "static/media/wordpress.svg": "/rdevs/static/media/wordpress.558f4cc800dc43b4439289b217a67c89.svg",
+    "static/media/jquery.svg": "/rdevs/static/media/jquery.fcc480227fd31fecc887db807010bf1d.svg",
+    "static/media/mysql.svg": "/rdevs/static/media/mysql.0697e026464104aea8919845703174b9.svg",
+    "static/media/react.svg": "/rdevs/static/media/react.e68b35f4774979ae220b1d5d7b345b00.svg",
+    "static/media/woocommerce.svg": "/rdevs/static/media/woocommerce.45d520e2899cfab334cb6b6c835b793a.svg",
+    "static/media/firebase.svg": "/rdevs/static/media/firebase.e6583a29712875c8977afcba1d0b6883.svg",
+    "static/media/redux.svg": "/rdevs/static/media/redux.0e4fb1c819ac4c060c92343147d4ccf7.svg",
+    "static/media/javascript.svg": "/rdevs/static/media/javascript.00f3e5cf8bcf4ae623b3835ca5791b15.svg",
+    "static/media/php.svg": "/rdevs/static/media/php.7c41b19923da57634a76372016ed129e.svg",
+    "static/media/git.svg": "/rdevs/static/media/git.c60b7e5ae8ec2562f23fdddcab300026.svg",
+    "index.html": "/rdevs/index.html",
+    "main.adb3f77c.css.map": "/rdevs/static/css/main.adb3f77c.css.map",
+    "main.8bd068ec.js.map": "/rdevs/static/js/main.8bd068ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.adb3f77c.css",
+    "static/js/main.8bd068ec.js"
+  ]
+}
