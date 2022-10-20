@@ -5,7 +5,7 @@ import ScrollTop from "./components/ScrollTop";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ScrollTop />
       <Routes>
         <Route path="/" element={<Home />} />
