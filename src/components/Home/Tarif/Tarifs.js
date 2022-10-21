@@ -10,7 +10,13 @@ import {
   ListItem,
   Divider,
   Link,
+  IconButton,
+  Paper,
+  Button,
 } from "@mui/material";
+import { useState } from "react";
+import Themes from "../../Themes/Themes";
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 const priceArray = [
   {
     price: "500€",
@@ -25,7 +31,7 @@ const priceArray = [
       "Liens réseaux sociaux",
       "Optimisation et référencement",
       "Mise en ligne",
-      "charte graphique à partir de maquettes prédéfinis",
+      "* charte graphique à partir de maquettes prédéfinis*",
       "Interface utilisateur WordPress",
     ],
   },
@@ -59,12 +65,13 @@ const priceArray = [
       "Liens réseaux sociaux",
       "Optimisation et référencement",
       "Mise en ligne",
-      "Charte graphique à partir de maquettes prédéfinis",
+      "* Charte graphique à partir de maquettes prédéfinis",
       "Interface utilisateur WordPress",
     ],
   },
 ];
 export default function Tarifs() {
+  const [modal, setModal] = useState(false);
   return (
     <Container
       id="tarifs"
@@ -89,7 +96,7 @@ export default function Tarifs() {
           Tarifs
         </Typography>
         <Typography variant="h4" color="custom.main">
-          Des offres adaptés à votre budget et à vos envies
+          Des offres adaptées à votre budget et à vos envies
         </Typography>
       </Box>
       <Grid
@@ -183,7 +190,49 @@ export default function Tarifs() {
             </Card>
           </Grid>
         ))}
+        <Button
+          sx={{ marginTop: "20px" }}
+          color="custom"
+          onClick={() => setModal(true)}
+        >
+          * Voir les maquettes
+        </Button>
       </Grid>
+      {modal && (
+        <Box
+          sx={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background: "rgba(0,0,0,0.9)",
+            zIndex: "2",
+          }}
+        >
+          <Paper
+            sx={{
+              position: "fixed",
+              top: "5%",
+              left: "5%",
+              transfrom: "translate(-50%, -50%)",
+              background: "#fff",
+              height: "90%",
+              width: "90%",
+              zIndex: "2",
+            }}
+          >
+            <IconButton
+              color="primary"
+              sx={{ margin: "20px" }}
+              onClick={() => setModal(false)}
+            >
+              <CloseRoundedIcon />
+            </IconButton>
+            <Themes />
+          </Paper>
+        </Box>
+      )}
     </Container>
   );
 }

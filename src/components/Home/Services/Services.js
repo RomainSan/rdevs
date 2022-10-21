@@ -8,24 +8,24 @@ const serviceArray = [
     title: "site web responsive",
     img: responsive,
     description:
-      "Un site web adapté à tous types de support ( mobile, tablette,ordinateur )",
+      "Un site web adapté à tous types de support ( mobile, tablette, ordinateur )",
   },
   {
     title: "design",
     img: design,
-    description: "Un design adapté a votre secteur d'activité",
+    description: "Un design adapté à votre secteur d'activité",
   },
   {
     title: "techologie",
     img: code,
     description:
-      "J'utilise différentes technologie pour permettre de répondre plus éfficacement à chaque besoins",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ratione",
   },
   {
     title: "référencement",
     img: referer,
     description:
-      "Un référencement naturel pour permettre la bonne visibilité de votre site à moindre",
+      "Un référencement naturel pour permettre la bonne visibilité de votre site à moindre coût",
   },
 ];
 export default function Services() {

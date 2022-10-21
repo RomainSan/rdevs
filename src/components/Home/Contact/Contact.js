@@ -11,9 +11,9 @@ export default function Contact() {
   const form = useRef();
   const [alertSuccess, setAlertSuccess] = useState("-110%");
   const [loading, setLoading] = useState(false);
-  function handleClick() {
+  const handleClick = () => {
     setLoading(true);
-  }
+  };
   const sendEmail = (e) => {
     e.preventDefault();
     handleClick();
