@@ -109,7 +109,6 @@ export default function Portfolio() {
                 }}
               >
                 <Button
-                  size="large"
                   variant="contained"
                   sx={{ color: "#fff" }}
                   href={item.link}
