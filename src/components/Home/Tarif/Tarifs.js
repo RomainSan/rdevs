@@ -176,7 +176,7 @@ export default function Tarifs() {
                         {i}
                       </Typography>
                     </ListItem>
-                    {index == 5 && <Divider />}
+                    {index === 5 && <Divider />}
                   </List>
                 ))}
               </CardContent>

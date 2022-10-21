@@ -37,7 +37,7 @@ export default function Navigation() {
   });
 
   const openNav = () => {
-    if (navState == "0px") {
+    if (navState === "0px") {
       setNavState("200px");
     } else {
       setNavState("0px");

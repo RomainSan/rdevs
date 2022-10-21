@@ -11,6 +11,9 @@ const theme = createTheme({
     custom: {
       main: "#ffffff",
     },
+    dark: {
+      main: "#000",
+    },
   },
   typography: {
     fontFamily: "Century Gothic",
@@ -35,6 +38,7 @@ const theme = createTheme({
       fontSize: "16px",
     },
   },
+
   components: {
     MuiLink: {
       styleOverrides: {
@@ -64,7 +68,7 @@ const theme = createTheme({
       styleOverrides: {
         title: {
           color: "#73A9AD",
-          textTransform : "initial"
+          textTransform: "initial",
         },
       },
     },

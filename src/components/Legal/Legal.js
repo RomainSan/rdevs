@@ -14,6 +14,7 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Divider from "@mui/material/Divider";
 import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRounded";
+
 const menuArray = [
   { title: "Définitions" },
   { title: "Champ d'application" },
@@ -360,6 +361,7 @@ export default function Legal() {
       ></AppBar>
       <Drawer
         sx={{
+          display: { xs: "none", md: "flex" },
           width: drawerWidth,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
@@ -382,6 +384,15 @@ export default function Legal() {
           </Link>
         </Toolbar>
         <Divider />
+        <ListItem disablePadding>
+          <ListItemButton
+            sx={{ color: "primary.main" }}
+            href={"#mentionslegales"}
+          >
+            <ListItemText primary={"Mentions légales"} />
+          </ListItemButton>
+        </ListItem>
+        <Divider />
         <List sx={{ color: "red" }}>
           {menuArray.map((item, index) => (
             <ListItem key={index} disablePadding>
@@ -398,14 +409,72 @@ export default function Legal() {
       >
         <Toolbar />
         <Box p={2} sx={{ maxWidth: "1500px", margin: "0 auto" }}>
-          <Typography variant="h3" sx={{ marginBottom: "40px" }}>
-            Conditions Générales de Vente
-          </Typography>
-          <Typography paragraph>
-            Ces Condition Générales de Vente décrivent les termes, modalités et
-            conditions selon lesquelles RDEVS (ci-après désigné le PRESTATAIRE)
-            fournit ses services à ses clients.
-          </Typography>
+          <>
+            <Typography
+              variant="h3"
+              sx={{ marginBottom: "50px" }}
+              id="mentionslegales"
+            >
+              Mentions Légales
+            </Typography>
+            <Typography paragraph>
+              La loi n°2004-575 du 21 juin 2004 pour la confiance dans
+              l’économie numérique définit le cadre réglementaire applicable aux
+              sites internet. En effet l’article 14 dispose « Le commerce
+              électronique est l’activité économique pour laquelle un éperonne
+              propose ou assure à distance et par voie électronique la
+              fourniture de biens ou de services.
+            </Typography>
+            <Typography paragraph>
+              Entrent également dans le champ du commerce électronique les
+              services tels que ceux consistant à fournir des informations en
+              ligne, des communications commerciales et des outils de recherche,
+              d’accès et de récupérations de données, d’accès à un réseau de
+              communication ou d’hébergement d’informations, y compris
+              lorsqu’ils ne sont pas rémunérés par ceux qui les reçoivent.
+            </Typography>
+            <Typography paragraph>
+              Une personne est regardée comme étant établie en France au sens du
+              présent chapitre lorsqu’elle s’y est installée d’une manière
+              stable et durable pour exercer effectivement son activité, quel
+              que soit, s’agissant d’une personne morale, le lieu d’implantation
+              de son siège social.
+            </Typography>
+            <Typography paragraph>
+              Rdevs est propriétaire des droits de propriété intellectuelle ou
+              détient les droits d’usage sur tous les éléments accessibles sur
+              le site, notamment les textes, images, graphismes, logo, icônes,
+              sons, logiciels. Toute reproduction, représentation, modification,
+              publication, adaptation de tout ou partie des éléments du site,
+              quel que soit le moyen ou le procédé utilisé, est interdite, sauf
+              autorisation écrite préalable de l’association.
+            </Typography>
+            <Typography paragraph>
+              Toute exploitation non autorisée du site ou de l’un quelconque des
+              éléments qu’il contient sera considérée comme constitutive d’une
+              contrefaçon et poursuivie conformément aux dispositions des
+              articles L.335-2 et suivants du Code de Propriété Intellectuelle.
+            </Typography>
+            <Typography paragraph>Propriétaire : Rdevs</Typography>
+            <Typography paragraph>
+              Responsable publication : Romain Sanieres
+            </Typography>
+            <Typography paragraph>
+              Le responsable publication est une personne physique ou une
+              personne morale.
+            </Typography>
+            <Typography paragraph>Hébergeur : IONOS</Typography>
+          </>
+          <>
+            <Typography variant="h3" sx={{ margin: "50px 0" }}>
+              Conditions Générales de Vente
+            </Typography>
+            <Typography paragraph>
+              Ces Condition Générales de Vente décrivent les termes, modalités
+              et conditions selon lesquelles RDEVS (ci-après désigné le
+              PRESTATAIRE) fournit ses services à ses clients.
+            </Typography>
+          </>
           {articleArray.map((item, index) => (
             <Box key={index} id={index}>
               <Typography key={index} py={2} variant="h4">

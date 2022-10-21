@@ -1,4 +1,4 @@
-import { Link, Typography, Button } from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import banner from "./banner.jpg";
 import Typewriter from "typewriter-effect";
@@ -16,6 +16,7 @@ export default function HomePage() {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
+          backgroundPosition: "center",
           height: "100vh",
           filter: "brightness(20%)",
         }}
@@ -74,7 +75,6 @@ export default function HomePage() {
           </Typography>
         ))}
       </Container>
-
     </>
   );
 }

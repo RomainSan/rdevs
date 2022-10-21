@@ -66,7 +66,6 @@ export default function Portfolio() {
                 flexFlow: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                background: "rgba(0,0,0,.5)",
                 background: `url(${item.background})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
