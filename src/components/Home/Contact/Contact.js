@@ -1,4 +1,14 @@
-import { Container, Box, Typography, Button, IconButton } from "@mui/material";
+import {
+  Container,
+  Box,
+  Typography,
+  Button,
+  IconButton,
+  Select,
+  MenuItem,
+  InputLabel,
+  FormControl,
+} from "@mui/material";
 import Alert from "@mui/material/Alert";
 import { useRef, useState } from "react";
 import { TextField } from "@mui/material";
@@ -32,6 +42,11 @@ export default function Contact() {
           console.log(error.text);
         }
       );
+  };
+  const [age, setAge] = useState("");
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
   };
   return (
     <Container
@@ -83,6 +98,28 @@ export default function Contact() {
             sx={{ marginBottom: "10px" }}
             required
           />
+          <FormControl variant="filled">
+            <InputLabel
+              id="demo-simple-select-filled-label"
+              sx={{ color: "#000" }}
+            >
+              Sujet
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-filled-label"
+              id="demo-simple-select-filled"
+              value={age}
+              onChange={handleChange}
+              name="user_subject"
+              sx={{ marginBottom: "10px" }}
+            >
+              <MenuItem value="Autre">
+                <em>Autre</em>
+              </MenuItem>
+              <MenuItem value="Devis">Devis</MenuItem>
+              <MenuItem value="Information">Information</MenuItem>
+            </Select>
+          </FormControl>
           <TextField
             variant="filled"
             label="Votre Message"
