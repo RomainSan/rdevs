@@ -16,7 +16,7 @@ const priceArray = [
     price: "500€",
     tech: "WordPress",
     link: "https://fr.wordpress.org/",
-    prestation: "Vitrine - One Page",
+    prestation: "Vitrine",
     description: "Idéale pour avoir une présence sur internet",
     content: [
       "Domaine + hébergement pendant 12 mois",
@@ -132,7 +132,7 @@ export default function Tarifs() {
                   sx={{ color: "#868686", textTransform: "capitalize" }}
                   gutterBottom={true}
                 >
-                  {index >= 1 ? "à partir de :" : "prix :"}
+                  à partir de :
                 </Typography>
                 <Typography
                   variant="h4"

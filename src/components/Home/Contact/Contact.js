@@ -1,11 +1,4 @@
-import {
-  Container,
-  Box,
-  Typography,
-  Button,
-  AlertTitle,
-  IconButton,
-} from "@mui/material";
+import { Container, Box, Typography, Button, IconButton } from "@mui/material";
 import Alert from "@mui/material/Alert";
 import { useRef, useState } from "react";
 import { TextField } from "@mui/material";
@@ -21,6 +14,8 @@ export default function Contact() {
     e.target[0].value = "";
     e.target[1].value = "";
     e.target[2].value = "";
+    setAlertSuccess("0%");
+
     emailjs
       .sendForm(
         "service_2l9d40t",
@@ -31,7 +26,6 @@ export default function Contact() {
 
       .then(
         (result) => {
-          setAlertSuccess("0%");
           console.log(result.text);
         },
         (error) => {
