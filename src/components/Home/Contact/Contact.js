@@ -1,30 +1,22 @@
-import {
-  Container,
-  Box,
-  Typography,
-  Button,
-  IconButton,
-  Select,
-  MenuItem,
-  InputLabel,
-  FormControl,
-} from "@mui/material";
+import { Container, Box, Typography, IconButton } from "@mui/material";
 import Alert from "@mui/material/Alert";
 import { useRef, useState } from "react";
 import { TextField } from "@mui/material";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import emailjs from "@emailjs/browser";
+import SendIcon from "@mui/icons-material/Send";
+import { LoadingButton } from "@mui/lab";
 
 export default function Contact() {
   const form = useRef();
   const [alertSuccess, setAlertSuccess] = useState("-110%");
+  const [loading, setLoading] = useState(false);
+  function handleClick() {
+    setLoading(true);
+  }
   const sendEmail = (e) => {
     e.preventDefault();
-
-    e.target[0].value = "";
-    e.target[1].value = "";
-    e.target[2].value = "";
-    setAlertSuccess("0%");
+    handleClick();
 
     emailjs
       .sendForm(
@@ -36,6 +28,12 @@ export default function Contact() {
 
       .then(
         (result) => {
+          setLoading(false);
+          e.target[0].value = "";
+          e.target[1].value = "";
+          e.target[2].value = "";
+          setAlertSuccess("0%");
+
           console.log(result.text);
         },
         (error) => {
@@ -106,15 +104,18 @@ export default function Contact() {
             sx={{ marginBottom: "10px" }}
             required
           />
-          <Button
+          <LoadingButton
             type="submit"
-            color="custom"
-            variant="contained"
-            size="large"
             sx={{ width: "fit-content" }}
+            size="large"
+            color="custom"
+            endIcon={<SendIcon color="primary" />}
+            loading={loading}
+            loadingPosition="end"
+            variant="contained"
           >
             Envoyer
-          </Button>
+          </LoadingButton>
         </form>
         {alertSuccess && (
           <Alert
