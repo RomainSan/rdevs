@@ -76,7 +76,7 @@ export default function Contact() {
             type="text"
             name="user_name"
             InputLabelProps={{
-              style: { color: "#000" },
+              style: { color: "#fff" },
             }}
             sx={{ marginBottom: "10px" }}
             required
@@ -87,7 +87,7 @@ export default function Contact() {
             type="email"
             name="user_email"
             InputLabelProps={{
-              style: { color: "#000" },
+              style: { color: "#fff" },
             }}
             sx={{ marginBottom: "10px" }}
             required
@@ -99,7 +99,7 @@ export default function Contact() {
             rows={5}
             name="message"
             InputLabelProps={{
-              style: { color: "#000" },
+              style: { color: "#fff" },
             }}
             sx={{ marginBottom: "10px" }}
             required
